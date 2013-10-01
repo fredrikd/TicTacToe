@@ -2,7 +2,7 @@
 
 namespace TicTacToe
 {
-    class TicResources
+    public class TicResources
     {
         public static Bitmap CrossBitmap;
         public static Bitmap KnotBitmap;
@@ -12,9 +12,9 @@ namespace TicTacToe
 
         static TicResources()
         {
-            CrossBitmap = new Bitmap("..\\..\\tic_cross.png");
+            CrossBitmap = new Bitmap(@"..\..\tic_cross.png");
             CrossBitmap = new Bitmap(CrossBitmap, 99, 99);
-            KnotBitmap = new Bitmap("..\\..\\tic_knot.png");
+            KnotBitmap = new Bitmap(@"..\..\tic_knot.png");
             KnotBitmap = new Bitmap(KnotBitmap, 99, 99);
 
             Cross = new Piece(CrossBitmap);

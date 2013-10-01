@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TicTacToe
 {
-    class Board
+    public class Board
     {
         private const int sizeX = 3;
         private const int sizeY = 3;
@@ -43,5 +43,25 @@ namespace TicTacToe
             pieces[m.X, m.Y] = m.P;
         }
 
+        public bool BoardFull()
+        {
+            bool full = true;
+            for (int y = 0; y < sizeY; y++)
+            {
+                for (int x = 0; x < sizeX; x++)
+                {
+                    if (pieces[x, y] == null)
+                    {
+                        full = false;
+                        // Vill break:a ut från en nästad loop.
+                        // C# verkar (i motsats till Java) inte tillåta break med labelangivelse,
+                        // så jag får göra Dijkstra ledsen i sin grav och använda lite goto...
+                        goto avsluta_loop;
+                    }
+                }
+            }
+            avsluta_loop:
+            return full;
+        }
     }
 }

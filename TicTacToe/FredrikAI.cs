@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace TicTacToe
 {
-    class FredrikAI: ComputerPlayer
+    public class FredrikAI: ComputerPlayer
     {
-        public FredrikAI(Piece piece)
-            : base(piece)
+        private TicGame ticGame;
+        public FredrikAI(string name, Piece piece, TicGame ticGame)
+            : base(name, piece, ticGame)
         {
+        }
+
+        public override void NotifyTurn()
+        {
+            MyGame.MakeMove(new Move(1, 1, PlayerPiece));
+            //board.pieces[0, 0] = PlayerPiece;
         }
     }
 }

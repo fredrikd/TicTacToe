@@ -6,13 +6,22 @@ using System.Threading.Tasks;
 
 namespace TicTacToe
 {
-    abstract class Player
+    public abstract class Player
     {
+        public string Name { get; set; }
         public Piece PlayerPiece { get; set; }
+        public TicGame MyGame { get; set; }
 
-        public Player(Piece piece)
+        public Player(string name, Piece piece, TicGame ticGame)
         {
+            Name = name;
             PlayerPiece = piece;
+            MyGame = ticGame;
         }
+
+        // Anropas när det blir spelarens tur.
+        // Nuvarande spelbräde skickas som parameter.
+        // 
+        public abstract void NotifyTurn();
     }
 }

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace TicTacToe
 {
-    abstract class ComputerPlayer : Player
+    public abstract class ComputerPlayer : Player
     {
-        public ComputerPlayer(Piece piece)
-            : base(piece)
+        public ComputerPlayer(string name, Piece piece, TicGame ticGame)
+            : base(name, piece, ticGame)
         {
         }
     }

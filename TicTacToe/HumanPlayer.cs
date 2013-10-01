@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace TicTacToe
 {
-    class HumanPlayer : Player
+    public class HumanPlayer : Player
     {
-        public HumanPlayer(Piece piece)
-            : base(piece)
+        public HumanPlayer(string name, Piece piece, TicGame ticGame)
+            : base(name, piece, ticGame)
         {
+        }
+
+        public override void NotifyTurn()
+        {
+            Console.WriteLine(Name + " notified.");
         }
     }
 }

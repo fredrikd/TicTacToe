@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace TicTacToe
 {
-    class Piece
+    public class Piece
     {
         public Bitmap Icon { get; set; }
 
