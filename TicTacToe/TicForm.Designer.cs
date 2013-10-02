@@ -77,6 +77,7 @@
             this.player1Box.Size = new System.Drawing.Size(150, 21);
             this.player1Box.TabIndex = 8;
             this.player1Box.Text = "Enter player or choose AI";
+            this.player1Box.SelectedIndexChanged += new System.EventHandler(this.player1Box_SelectedIndexChanged);
             // 
             // player2Box
             // 
@@ -163,6 +164,7 @@
             this.messageLabel.Size = new System.Drawing.Size(150, 22);
             this.messageLabel.TabIndex = 19;
             this.messageLabel.Text = "Welcome!";
+            this.messageLabel.Click += new System.EventHandler(this.messageLabel_Click);
             // 
             // statusLabel
             // 
@@ -175,12 +177,13 @@
             // 
             // ticPanel
             // 
-            this.ticPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.ticPanel.BackColor = System.Drawing.Color.White;
             this.ticPanel.CurrentBoard = null;
             this.ticPanel.Location = new System.Drawing.Point(12, 12);
             this.ticPanel.Name = "ticPanel";
             this.ticPanel.Size = new System.Drawing.Size(301, 301);
             this.ticPanel.TabIndex = 2;
+            this.ticPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ticPanel_Paint);
             this.ticPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ticPanel_MouseClick);
             // 
             // TicForm

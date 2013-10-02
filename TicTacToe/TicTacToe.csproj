@@ -48,6 +48,7 @@
     <Compile Include="ComputerPlayer.cs" />
     <Compile Include="FredrikAI.cs" />
     <Compile Include="HumanPlayer.cs" />
+    <Compile Include="MicheleAI.cs" />
     <Compile Include="Move.cs" />
     <Compile Include="Piece.cs" />
     <Compile Include="Player.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="TicPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="checkWinner.cs" />
     <EmbeddedResource Include="TicForm.resx">
       <DependentUpon>TicForm.cs</DependentUpon>
     </EmbeddedResource>
