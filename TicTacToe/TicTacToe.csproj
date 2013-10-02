@@ -65,7 +65,6 @@
     <Compile Include="TicPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="checkWinner.cs" />
     <EmbeddedResource Include="TicForm.resx">
       <DependentUpon>TicForm.cs</DependentUpon>
     </EmbeddedResource>
