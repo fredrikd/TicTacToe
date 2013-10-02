@@ -16,7 +16,7 @@ namespace TicTacToe
         private TicGame ticGame;
         private Dictionary<string, Player> computerPlayerDict;
         private FredrikAI fredrikAI;
-
+        private MicheleAI micheleAI;
         public TicForm()
         {
             InitializeComponent();
@@ -29,6 +29,10 @@ namespace TicTacToe
             computerPlayerDict["Fredrik AI"] = fredrikAI;
             player1Box.Items.Add("Fredrik AI");
             player2Box.Items.Add("Fredrik AI");
+            micheleAI = new MicheleAI("Michele AI", TicResources.Cross, ticGame);
+            computerPlayerDict["Michele AI"] = micheleAI;
+            player1Box.Items.Add("Michele AI");
+            player2Box.Items.Add("Michele AI");
 
         }
 
@@ -87,6 +91,21 @@ namespace TicTacToe
         {
             Point clickPoint = new Point(e.X, e.Y);
             Console.WriteLine(ticPanel.WhichCell(clickPoint));
+        }
+
+        private void ticPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void messageLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void player1Box_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
