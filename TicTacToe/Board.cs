@@ -33,7 +33,7 @@ namespace TicTacToe
             {
                 for (int x = 0; x < sizeX; x++)
                 {
-                    pieces[x, y] = board.pieces[x, y];
+                    pieces[x, y] = board.pieces[x, y]; //board.pieces 
                 }
             }
         }
@@ -65,17 +65,21 @@ namespace TicTacToe
         }
 
         //Kollar ifall Move, "m" innehåller ett värde eller ej.
+        //Method som returnerar en bool
         public bool AbleMove(Move m)
         {
             if (m == null)
             {
                 return false;
             }
-            else if (m == MakeMove)
+            else if (pieces[m.X, m.Y] != null)
+            {
+                return false;
+            }
+            else
             {
                 return true;
             }
-            
 
         }
     }
