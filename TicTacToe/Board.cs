@@ -63,5 +63,20 @@ namespace TicTacToe
             avsluta_loop:
             return full;
         }
+
+        //Kollar ifall Move, "m" innehåller ett värde eller ej.
+        public bool AbleMove(Move m)
+        {
+            if (m == null)
+            {
+                return false;
+            }
+            else if (m == MakeMove)
+            {
+                return true;
+            }
+            
+
+        }
     }
 }
