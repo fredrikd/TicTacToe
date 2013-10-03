@@ -79,10 +79,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="ClassDiagram1.cd" />
-<<<<<<< HEAD
-    <None Include="ClassDiagram2.cd" />
-=======
->>>>>>> b0a022beb86a3c7c966ab78b6a19fe7300ecf0d2
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
