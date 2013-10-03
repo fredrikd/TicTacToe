@@ -77,7 +77,6 @@
             this.player1Box.Size = new System.Drawing.Size(150, 21);
             this.player1Box.TabIndex = 8;
             this.player1Box.Text = "Enter player or choose AI";
-            this.player1Box.SelectedIndexChanged += new System.EventHandler(this.player1Box_SelectedIndexChanged);
             // 
             // player2Box
             // 
@@ -153,7 +152,7 @@
             // messageLabel
             // 
             this.messageLabel.AutoSize = true;
-            this.messageLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.messageLabel.BackColor = System.Drawing.Color.White;
             this.messageLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.messageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.messageLabel.ForeColor = System.Drawing.Color.DarkGreen;
@@ -164,7 +163,6 @@
             this.messageLabel.Size = new System.Drawing.Size(150, 22);
             this.messageLabel.TabIndex = 19;
             this.messageLabel.Text = "Welcome!";
-            this.messageLabel.Click += new System.EventHandler(this.messageLabel_Click);
             // 
             // statusLabel
             // 
@@ -183,8 +181,6 @@
             this.ticPanel.Name = "ticPanel";
             this.ticPanel.Size = new System.Drawing.Size(301, 301);
             this.ticPanel.TabIndex = 2;
-            this.ticPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ticPanel_Paint);
-            this.ticPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ticPanel_MouseClick);
             // 
             // TicForm
             // 
@@ -205,6 +201,7 @@
             this.Controls.Add(this.copyrightLabel);
             this.Controls.Add(this.ticPanel);
             this.Controls.Add(this.logoBox);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "TicForm";

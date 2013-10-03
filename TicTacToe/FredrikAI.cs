@@ -14,10 +14,18 @@ namespace TicTacToe
         {
         }
 
+        public override void NotifyGameStarts()
+        {
+        }
+
         public override void NotifyTurn()
         {
             MyGame.MakeMove(new Move(1, 1, PlayerPiece));
             //board.pieces[0, 0] = PlayerPiece;
+        }
+
+        public override void NotifyGameStops()
+        {
         }
     }
 }

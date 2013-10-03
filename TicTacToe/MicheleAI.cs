@@ -14,10 +14,24 @@ namespace TicTacToe
         {
         }
 
+        // Jag (Fredrik) lade till en tom implementation i Micheles klass
+        // för att programmet ska fungera efter att jag lagt till en motsvarande
+        // abstrakt metod i basklassen.
+        public override void NotifyGameStarts()
+        {
+        }
+
         public override void NotifyTurn()
         {
             MyGame.MakeMove(new Move(2, 1, PlayerPiece));
             //board.pieces[0, 0] = PlayerPiece;
+        }
+
+        // Jag (Fredrik) lade till en tom implementation i Micheles klass
+        // för att programmet ska fungera efter att jag lagt till en motsvarande
+        // abstrakt metod i basklassen.
+        public override void NotifyGameStops()
+        {
         }
     }
 }

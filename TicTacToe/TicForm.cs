@@ -52,7 +52,7 @@ namespace TicTacToe
             if (computerPlayerDict.ContainsKey(player2Box.Text))
                 player = computerPlayerDict[player2Box.Text];
             else
-                player = new HumanPlayer(player2Box.Text, TicResources.Cross, ticGame);
+                player = new HumanPlayer(player2Box.Text, TicResources.Knot, ticGame);
             return player;
         }
 
@@ -75,6 +75,7 @@ namespace TicTacToe
             stopButton.Enabled = false;
             player1Box.Enabled = true;
             player2Box.Enabled = true;
+            ticGame.StopGame();
         }
 
         private void startButton_Click(object sender, EventArgs e)
@@ -85,27 +86,6 @@ namespace TicTacToe
         private void stopButton_Click(object sender, EventArgs e)
         {
             Stop();
-        }
-
-        private void ticPanel_MouseClick(object sender, MouseEventArgs e)
-        {
-            Point clickPoint = new Point(e.X, e.Y);
-            Console.WriteLine(ticPanel.WhichCell(clickPoint));
-        }
-
-        private void ticPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void messageLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void player1Box_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

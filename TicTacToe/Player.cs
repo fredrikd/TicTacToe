@@ -19,9 +19,15 @@ namespace TicTacToe
             MyGame = ticGame;
         }
 
+        // Anropas när ett nytt spel startas.
+        public abstract void NotifyGameStarts();
+
         // Anropas när det blir spelarens tur.
         // Nuvarande spelbräde skickas som parameter.
         // 
         public abstract void NotifyTurn();
+
+        // Anropas när spelet slutar.
+        public abstract void NotifyGameStops();
     }
 }

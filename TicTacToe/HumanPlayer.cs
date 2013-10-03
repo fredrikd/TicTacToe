@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Drawing;
 
 namespace TicTacToe
 {
@@ -13,9 +15,34 @@ namespace TicTacToe
         {
         }
 
+        public override void NotifyGameStarts()
+        {
+        }
+
         public override void NotifyTurn()
         {
             Console.WriteLine(Name + " notified.");
+            SubscribeToPanelClicks(true);
+        }
+
+        public override void NotifyGameStops()
+        {
+            SubscribeToPanelClicks(false);
+        }
+
+        private void SubscribeToPanelClicks(bool wantsToSubscribe)
+        {
+            if (wantsToSubscribe) MyGame.ticPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(PlayerClicksPanel);
+            else MyGame.ticPanel.MouseClick -= new System.Windows.Forms.MouseEventHandler(PlayerClicksPanel);
+        }
+
+        private void PlayerClicksPanel(object sender, MouseEventArgs e)
+        {
+            Point clickPoint = new Point(e.X, e.Y);
+            Point clickCell = MyGame.ticPanel.WhichCell(clickPoint);
+            Console.WriteLine(Name + " utför draget " + clickCell);
+            SubscribeToPanelClicks(false);
+            MyGame.MakeMove(new Move(clickCell, PlayerPiece));
         }
     }
 }
