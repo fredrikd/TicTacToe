@@ -17,6 +17,7 @@ namespace TicTacToe
         private Dictionary<string, Player> computerPlayerDict;
         private FredrikAI fredrikAI;
         private MicheleAI micheleAI;
+        private TselleckAI tselleckAI;
         public TicForm()
         {
             InitializeComponent();
@@ -33,6 +34,10 @@ namespace TicTacToe
             computerPlayerDict["Michele AI"] = micheleAI;
             player1Box.Items.Add("Michele AI");
             player2Box.Items.Add("Michele AI");
+            tselleckAI = new TselleckAI("Tselleck AI", TicResources.Cross, ticGame);
+            computerPlayerDict["Tselleck AI"] = micheleAI;
+            player1Box.Items.Add("Tselleck AI");
+            player2Box.Items.Add("Tselleck AI");
 
         }
 

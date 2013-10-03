@@ -55,7 +55,7 @@ namespace TicTacToe
             
 
             if (state == GameState.Player1)
-                if (true) // true skall ersätta med Dennis metoden
+                if (board.AbleMove(move)) // true skall ersätta med Dennis metoden
                 {
                     board.MakeMove(move);
                     ticPanel.Invalidate();
@@ -75,7 +75,7 @@ namespace TicTacToe
                     return;
                 }
             else if (state == GameState.Player2)
-                if (true) // true skall ersätta med Dennis metoden
+                if (board.AbleMove(move)) // true skall ersätta med Dennis metoden
                 {
                     board.MakeMove(move);
                     ticPanel.Invalidate();
