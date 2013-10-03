@@ -13,6 +13,12 @@ namespace TicTacToe
 
         public Board CurrentBoard { get; set; }
 
+        public TicPanel()
+            : base()
+        {
+            DoubleBuffered = true;
+        }
+
         private void DrawGrid(Graphics g, Pen p)
         {
             for (int y = 0; y <= gridYInterval * gridYNumber; y += gridYInterval)

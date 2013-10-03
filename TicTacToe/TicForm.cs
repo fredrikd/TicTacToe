@@ -40,7 +40,10 @@ namespace TicTacToe
         {
             Player player;
             if (computerPlayerDict.ContainsKey(player1Box.Text))
+            {
                 player = computerPlayerDict[player1Box.Text];
+                player.PlayerPiece = TicResources.Cross;
+            }
             else
                 player = new HumanPlayer(player1Box.Text, TicResources.Cross, ticGame);
             return player;
@@ -50,7 +53,10 @@ namespace TicTacToe
         {
             Player player;
             if (computerPlayerDict.ContainsKey(player2Box.Text))
+            {
                 player = computerPlayerDict[player2Box.Text];
+                player.PlayerPiece = TicResources.Knot;
+            }
             else
                 player = new HumanPlayer(player2Box.Text, TicResources.Knot, ticGame);
             return player;
