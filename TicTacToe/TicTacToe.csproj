@@ -65,6 +65,7 @@
     <Compile Include="TicPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="TselleckAI.cs" />
     <EmbeddedResource Include="TicForm.resx">
       <DependentUpon>TicForm.cs</DependentUpon>
     </EmbeddedResource>
