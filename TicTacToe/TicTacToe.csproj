@@ -48,6 +48,7 @@
     <Compile Include="ComputerPlayer.cs" />
     <Compile Include="FredrikAI.cs" />
     <Compile Include="HumanPlayer.cs" />
+    <Compile Include="MicheleAI.cs" />
     <Compile Include="Move.cs" />
     <Compile Include="Piece.cs" />
     <Compile Include="Player.cs" />
@@ -78,7 +79,10 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="ClassDiagram1.cd" />
+<<<<<<< HEAD
     <None Include="ClassDiagram2.cd" />
+=======
+>>>>>>> b0a022beb86a3c7c966ab78b6a19fe7300ecf0d2
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="TicTacToe.Board" Collapsed="true">
     <Position X="5.25" Y="0.5" Width="1.5" />
@@ -105,3 +106,6 @@
   </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
+=======
+<ClassDiagram /> 
+>>>>>>> b0a022beb86a3c7c966ab78b6a19fe7300ecf0d2
