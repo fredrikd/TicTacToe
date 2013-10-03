@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="TicTacToe.Board" Collapsed="true">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAgEACAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAgEACAAAAAAAA=</HashCode>
       <FileName>Board.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -18,14 +17,14 @@
   <Class Name="TicTacToe.FredrikAI" Collapsed="true">
     <Position X="0.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>FredrikAI.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TicTacToe.HumanPlayer" Collapsed="true">
     <Position X="2.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>HumanPlayer.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -46,7 +45,7 @@
   <Class Name="TicTacToe.Player" Collapsed="true">
     <Position X="1.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAQAAAAAAACAAAAAQAAAAAA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -60,21 +59,21 @@
   <Class Name="TicTacToe.TicForm" Collapsed="true">
     <Position X="8.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgkAAAEDAAAAAggASBAAACAABAACABIACQAQQAAgA=</HashCode>
+      <HashCode>AAAgkAAAEDCAAAAggASJAAECAABAACARIACQAQQAAgA=</HashCode>
       <FileName>TicForm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TicTacToe.TicGame" Collapsed="true">
     <Position X="10.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>wAAAAAAAABAAAAAAAAQAAAAgAAAAAAAEAACAAAAAAAA=</HashCode>
+      <HashCode>wACAAAAAEBAAAAAAAAQAAAAgAAAAAgAEIACAAAAAAAA=</HashCode>
       <FileName>TicGame.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="TicTacToe.TicPanel" Collapsed="true">
     <Position X="5.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAACAAQAAEAAAAAAAAAAAAAAAAAAgAAAACAAA=</HashCode>
+      <HashCode>AACAAAAAACBAQAAEAAAAAAAAAIAAAAAAAAgAAAACAAA=</HashCode>
       <FileName>TicPanel.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -106,6 +105,3 @@
   </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
-=======
-<ClassDiagram /> 
->>>>>>> b0a022beb86a3c7c966ab78b6a19fe7300ecf0d2
