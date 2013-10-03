@@ -11,8 +11,9 @@ namespace TicTacToe
 
     public class TicGame
     {
+        public TicPanel ticPanel;
+
         private GameState state;
-        private TicPanel ticPanel;
         private Label messageLabel;
         private Board board;
         private Player player1;
@@ -33,19 +34,33 @@ namespace TicTacToe
             this.board = board;
             this.player1 = player1;
             this.player2 = player2;
+            ticPanel.Invalidate();
             player1sTurn();
         }
 
         public void StopGame()
         {
+            player1.NotifyGameStops();
             player1 = null;
+
+            player2.NotifyGameStops();
             player2 = null;
+
+            messageLabel.Text = "Game stopped.";
         }
 
         public void MakeMove(Move move)
         {
             board.MakeMove(move);
             ticPanel.Invalidate();
+            if (state == GameState.Player1)
+            {
+                player2sTurn();
+            }
+            else
+            {
+                player1sTurn();
+            }
         }
 
         private void player1sTurn()

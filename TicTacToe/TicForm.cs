@@ -16,7 +16,7 @@ namespace TicTacToe
         private TicGame ticGame;
         private Dictionary<string, Player> computerPlayerDict;
         private FredrikAI fredrikAI;
-
+        private MicheleAI micheleAI;
         public TicForm()
         {
             InitializeComponent();
@@ -29,6 +29,10 @@ namespace TicTacToe
             computerPlayerDict["Fredrik AI"] = fredrikAI;
             player1Box.Items.Add("Fredrik AI");
             player2Box.Items.Add("Fredrik AI");
+            micheleAI = new MicheleAI("Michele AI", TicResources.Cross, ticGame);
+            computerPlayerDict["Michele AI"] = micheleAI;
+            player1Box.Items.Add("Michele AI");
+            player2Box.Items.Add("Michele AI");
 
         }
 
@@ -48,7 +52,7 @@ namespace TicTacToe
             if (computerPlayerDict.ContainsKey(player2Box.Text))
                 player = computerPlayerDict[player2Box.Text];
             else
-                player = new HumanPlayer(player2Box.Text, TicResources.Cross, ticGame);
+                player = new HumanPlayer(player2Box.Text, TicResources.Knot, ticGame);
             return player;
         }
 
@@ -71,6 +75,7 @@ namespace TicTacToe
             stopButton.Enabled = false;
             player1Box.Enabled = true;
             player2Box.Enabled = true;
+            ticGame.StopGame();
         }
 
         private void startButton_Click(object sender, EventArgs e)
@@ -81,12 +86,6 @@ namespace TicTacToe
         private void stopButton_Click(object sender, EventArgs e)
         {
             Stop();
-        }
-
-        private void ticPanel_MouseClick(object sender, MouseEventArgs e)
-        {
-            Point clickPoint = new Point(e.X, e.Y);
-            Console.WriteLine(ticPanel.WhichCell(clickPoint));
         }
     }
 }

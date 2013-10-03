@@ -152,7 +152,7 @@
             // messageLabel
             // 
             this.messageLabel.AutoSize = true;
-            this.messageLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.messageLabel.BackColor = System.Drawing.Color.White;
             this.messageLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.messageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.messageLabel.ForeColor = System.Drawing.Color.DarkGreen;
@@ -175,13 +175,12 @@
             // 
             // ticPanel
             // 
-            this.ticPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.ticPanel.BackColor = System.Drawing.Color.White;
             this.ticPanel.CurrentBoard = null;
             this.ticPanel.Location = new System.Drawing.Point(12, 12);
             this.ticPanel.Name = "ticPanel";
             this.ticPanel.Size = new System.Drawing.Size(301, 301);
             this.ticPanel.TabIndex = 2;
-            this.ticPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ticPanel_MouseClick);
             // 
             // TicForm
             // 
@@ -202,6 +201,7 @@
             this.Controls.Add(this.copyrightLabel);
             this.Controls.Add(this.ticPanel);
             this.Controls.Add(this.logoBox);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "TicForm";
