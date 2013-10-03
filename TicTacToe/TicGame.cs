@@ -53,6 +53,14 @@ namespace TicTacToe
         {
             board.MakeMove(move);
             ticPanel.Invalidate();
+            if (state == GameState.Player1)
+            {
+                player2sTurn();
+            }
+            else
+            {
+                player1sTurn();
+            }
         }
 
         private void player1sTurn()
