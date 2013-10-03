@@ -51,16 +51,49 @@ namespace TicTacToe
 
         public void MakeMove(Move move)
         {
-            board.MakeMove(move);
-            ticPanel.Invalidate();
+            
+            
+
             if (state == GameState.Player1)
-            {
-                player2sTurn();
-            }
-            else
-            {
-                player1sTurn();
-            }
+                if (true) // true skall ersätta med Dennis metoden
+                {
+                    board.MakeMove(move);
+                    ticPanel.Invalidate();
+                    if (board.BoardFull())
+                    {
+                        // kolla gameover metoden
+                        return;
+                    }
+                    else
+                    {
+                        player2sTurn();
+                    }
+                }
+                else
+                {
+                    player1sTurn();
+                    return;
+                }
+            else if (state == GameState.Player2)
+                if (true) // true skall ersätta med Dennis metoden
+                {
+                    board.MakeMove(move);
+                    ticPanel.Invalidate();
+                    if (board.BoardFull())
+                    {
+                        // kolla gameover metoden
+                        return;
+                    }
+                    else
+                    {
+                        player1sTurn();
+                    }
+                }
+                else
+                {
+                    player2sTurn();
+                    return;
+                }
         }
 
         private void player1sTurn()
