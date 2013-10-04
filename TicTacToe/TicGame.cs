@@ -63,8 +63,8 @@ namespace TicTacToe
                     ticPanel.Invalidate();
                     if (board.BoardFull() || board.FindWinner().Winner != null)  // Tillkallar metoderna BoardFull/FindWinner för att se ifall spelbrädet är fullt eller nån har vunnit
                     {
-                        // kolla gameover metoden
-                        return;
+                        
+                        gameOver();
                     }
                     else
                     {
@@ -83,8 +83,8 @@ namespace TicTacToe
                     ticPanel.Invalidate();
                     if (board.BoardFull() || board.FindWinner().Winner != null)  // Tillkallar metoderna BoardFull/FindWinner för att se ifall spelbrädet är fullt eller nån har vunnit
                     {
-                        // kolla gameover metoden
-                        return;
+                        
+                        gameOver();
                     }
                     else
                     {
@@ -98,24 +98,37 @@ namespace TicTacToe
                 }
         }
 
-        public void gameOVer()
+        private void gameOver()
         {
+            if (board.FindWinner().Winner == player1.PlayerPiece)
+            {
+                messageLabel.Text = player1.Name + " wins!";
+            }
+
+            if (board.FindWinner().Winner == player2.PlayerPiece)
+            {
+                messageLabel.Text = player2.Name + " wins!";
+            }
+
+            if (board.FindWinner().Winner == null)
+            {
+                messageLabel.Text = "It's a draw!";
+            }
+
 
         }
-
-       
 
          private void player1sTurn()
         {
             state = GameState.Player1;
-            messageLabel.Text = "Player 1's turn.";
+            messageLabel.Text =  player1.Name + "'s turn";
             player1.NotifyTurn();
         }
 
         private void player2sTurn()
         {
             state = GameState.Player2;
-            messageLabel.Text = "Player 2's turn.";
+            messageLabel.Text =  player2.Name + "'s turn.";
             player2.NotifyTurn();
         }
     }
