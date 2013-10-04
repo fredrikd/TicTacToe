@@ -34,11 +34,13 @@ namespace TicTacToe
             this.board = board;
             this.player1 = player1;
             this.player2 = player2;
+            player1.NotifyGameStarts();
+            player2.NotifyGameStarts();
             ticPanel.Invalidate();
             player1sTurn();
         }
 
-        public void StopGame()
+        public void AbortGame()
         {
             player1.NotifyGameStops();
             player1 = null;
@@ -46,7 +48,7 @@ namespace TicTacToe
             player2.NotifyGameStops();
             player2 = null;
 
-            messageLabel.Text = "Game stopped.";
+            messageLabel.Text = "Game aborted.";
         }
 
         public void MakeMove(Move move)
