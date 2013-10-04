@@ -95,6 +95,11 @@ namespace TicTacToe
                     return;
                 }
         }
+        public void gameOVer()
+        {
+
+        }
+
 
         private void player1sTurn()
         {
