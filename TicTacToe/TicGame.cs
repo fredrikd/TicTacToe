@@ -97,13 +97,15 @@ namespace TicTacToe
                     return;
                 }
         }
+
         public void gameOVer()
         {
 
         }
 
+       
 
-        private void player1sTurn()
+         private void player1sTurn()
         {
             state = GameState.Player1;
             messageLabel.Text = "Player 1's turn.";
