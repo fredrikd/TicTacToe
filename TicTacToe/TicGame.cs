@@ -61,7 +61,7 @@ namespace TicTacToe
                 {
                     board.MakeMove(move);   // Tillkallar metoden MakeMove för att göra draget ifall det är gilltligt
                     ticPanel.Invalidate();
-                    if (board.BoardFull())  // Tillkallar metoden BoardFull för att se ifall spelbrädet är fullt
+                    if (board.BoardFull() || board.FindWinner().Winner != null)  // Tillkallar metoderna BoardFull/FindWinner för att se ifall spelbrädet är fullt eller nån har vunnit
                     {
                         // kolla gameover metoden
                         return;
@@ -81,7 +81,7 @@ namespace TicTacToe
                 {
                     board.MakeMove(move);   // Tillkallar metoden MakeMove för att göra draget ifall det är gilltligt
                     ticPanel.Invalidate();
-                    if (board.BoardFull())  // Tillkallar metoden BoardFull för att se ifall spelbrädet är fullt
+                    if (board.BoardFull() || board.FindWinner().Winner != null)  // Tillkallar metoderna BoardFull/FindWinner för att se ifall spelbrädet är fullt eller nån har vunnit
                     {
                         // kolla gameover metoden
                         return;
