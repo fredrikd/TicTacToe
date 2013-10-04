@@ -98,5 +98,15 @@ namespace TicTacToe
         {
             Stop();
         }
+
+        private void logoBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TicForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
