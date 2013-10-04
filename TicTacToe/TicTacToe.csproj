@@ -95,6 +95,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\tic_logo1.jpg" />
+    <None Include="Resources\tic_logo_png.png" />
     <Content Include="tic_cross.png" />
     <Content Include="tic_knot.png" />
     <Content Include="tic_logo.png" />

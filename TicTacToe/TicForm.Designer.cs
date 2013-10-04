@@ -29,36 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TicForm));
-            this.logoBox = new System.Windows.Forms.PictureBox();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.copyrightLabel = new System.Windows.Forms.Label();
             this.player1Box = new System.Windows.Forms.ComboBox();
             this.player2Box = new System.Windows.Forms.ComboBox();
             this.abortButton = new System.Windows.Forms.Button();
             this.startButton = new System.Windows.Forms.Button();
-            this.player1IconBox = new System.Windows.Forms.PictureBox();
             this.player1Label = new System.Windows.Forms.Label();
-            this.player2IconBox = new System.Windows.Forms.PictureBox();
             this.player2Label = new System.Windows.Forms.Label();
             this.messageLabel = new System.Windows.Forms.Label();
             this.statusLabel = new System.Windows.Forms.Label();
             this.ticPanel = new TicTacToe.TicPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player1IconBox)).BeginInit();
+            this.player2IconBox = new System.Windows.Forms.PictureBox();
+            this.player1IconBox = new System.Windows.Forms.PictureBox();
+            this.logoBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player2IconBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player1IconBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // logoBox
-            // 
-            this.logoBox.ErrorImage = ((System.Drawing.Image)(resources.GetObject("logoBox.ErrorImage")));
-            this.logoBox.Image = global::TicTacToe.Properties.Resources.tic_logo;
-            this.logoBox.InitialImage = null;
-            this.logoBox.Location = new System.Drawing.Point(323, 12);
-            this.logoBox.Name = "logoBox";
-            this.logoBox.Size = new System.Drawing.Size(150, 50);
-            this.logoBox.TabIndex = 1;
-            this.logoBox.TabStop = false;
-            this.logoBox.Click += new System.EventHandler(this.logoBox_Click);
             // 
             // copyrightLabel
             // 
@@ -112,16 +100,6 @@
             this.startButton.UseVisualStyleBackColor = true;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
-            // player1IconBox
-            // 
-            this.player1IconBox.Image = ((System.Drawing.Image)(resources.GetObject("player1IconBox.Image")));
-            this.player1IconBox.Location = new System.Drawing.Point(324, 101);
-            this.player1IconBox.Name = "player1IconBox";
-            this.player1IconBox.Size = new System.Drawing.Size(14, 14);
-            this.player1IconBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.player1IconBox.TabIndex = 16;
-            this.player1IconBox.TabStop = false;
-            // 
             // player1Label
             // 
             this.player1Label.AutoSize = true;
@@ -130,16 +108,6 @@
             this.player1Label.Size = new System.Drawing.Size(48, 13);
             this.player1Label.TabIndex = 15;
             this.player1Label.Text = "Player 1:";
-            // 
-            // player2IconBox
-            // 
-            this.player2IconBox.Image = ((System.Drawing.Image)(resources.GetObject("player2IconBox.Image")));
-            this.player2IconBox.Location = new System.Drawing.Point(324, 144);
-            this.player2IconBox.Name = "player2IconBox";
-            this.player2IconBox.Size = new System.Drawing.Size(14, 14);
-            this.player2IconBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.player2IconBox.TabIndex = 18;
-            this.player2IconBox.TabStop = false;
             // 
             // player2Label
             // 
@@ -176,18 +144,50 @@
             // 
             // ticPanel
             // 
-            this.ticPanel.BackColor = System.Drawing.Color.White;
+            this.ticPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ticPanel.CurrentBoard = null;
             this.ticPanel.Location = new System.Drawing.Point(12, 12);
             this.ticPanel.Name = "ticPanel";
             this.ticPanel.Size = new System.Drawing.Size(301, 301);
             this.ticPanel.TabIndex = 2;
             // 
+            // player2IconBox
+            // 
+            this.player2IconBox.Image = ((System.Drawing.Image)(resources.GetObject("player2IconBox.Image")));
+            this.player2IconBox.Location = new System.Drawing.Point(324, 144);
+            this.player2IconBox.Name = "player2IconBox";
+            this.player2IconBox.Size = new System.Drawing.Size(14, 14);
+            this.player2IconBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.player2IconBox.TabIndex = 18;
+            this.player2IconBox.TabStop = false;
+            // 
+            // player1IconBox
+            // 
+            this.player1IconBox.Image = ((System.Drawing.Image)(resources.GetObject("player1IconBox.Image")));
+            this.player1IconBox.Location = new System.Drawing.Point(324, 101);
+            this.player1IconBox.Name = "player1IconBox";
+            this.player1IconBox.Size = new System.Drawing.Size(14, 14);
+            this.player1IconBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.player1IconBox.TabIndex = 16;
+            this.player1IconBox.TabStop = false;
+            // 
+            // logoBox
+            // 
+            this.logoBox.ErrorImage = ((System.Drawing.Image)(resources.GetObject("logoBox.ErrorImage")));
+            this.logoBox.Image = global::TicTacToe.Properties.Resources.tic_logo_png;
+            this.logoBox.InitialImage = null;
+            this.logoBox.Location = new System.Drawing.Point(323, 12);
+            this.logoBox.Name = "logoBox";
+            this.logoBox.Size = new System.Drawing.Size(150, 50);
+            this.logoBox.TabIndex = 1;
+            this.logoBox.TabStop = false;
+            this.logoBox.Click += new System.EventHandler(this.logoBox_Click);
+            // 
             // TicForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(484, 326);
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.messageLabel);
@@ -208,9 +208,9 @@
             this.Name = "TicForm";
             this.Text = "Tic Tac Toe .NET";
             this.Load += new System.EventHandler(this.TicForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.player1IconBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2IconBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player1IconBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
