@@ -121,7 +121,7 @@ namespace TicTacToe
          private void player1sTurn()
         {
             state = GameState.Player1;
-            messageLabel.Text =  player1.Name + "'s turn";
+            messageLabel.Text =  player1.Name + "'s turn.";
             player1.NotifyTurn();
         }
 
