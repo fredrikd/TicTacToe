@@ -39,10 +39,10 @@
             this.player2Label = new System.Windows.Forms.Label();
             this.messageLabel = new System.Windows.Forms.Label();
             this.statusLabel = new System.Windows.Forms.Label();
-            this.ticPanel = new TicTacToe.TicPanel();
             this.player2IconBox = new System.Windows.Forms.PictureBox();
             this.player1IconBox = new System.Windows.Forms.PictureBox();
             this.logoBox = new System.Windows.Forms.PictureBox();
+            this.ticPanel = new TicTacToe.TicPanel();
             ((System.ComponentModel.ISupportInitialize)(this.player2IconBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player1IconBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
@@ -51,6 +51,7 @@
             // copyrightLabel
             // 
             this.copyrightLabel.AutoSize = true;
+            this.copyrightLabel.ForeColor = System.Drawing.Color.Green;
             this.copyrightLabel.Location = new System.Drawing.Point(327, 65);
             this.copyrightLabel.Name = "copyrightLabel";
             this.copyrightLabel.Size = new System.Drawing.Size(145, 13);
@@ -60,6 +61,8 @@
             // player1Box
             // 
             this.player1Box.AccessibleDescription = "dfgertert";
+            this.player1Box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.player1Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.player1Box.FormattingEnabled = true;
             this.player1Box.Location = new System.Drawing.Point(323, 117);
             this.player1Box.Name = "player1Box";
@@ -70,6 +73,8 @@
             // player2Box
             // 
             this.player2Box.AccessibleDescription = "dfgertert";
+            this.player2Box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.player2Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.player2Box.FormattingEnabled = true;
             this.player2Box.Location = new System.Drawing.Point(323, 160);
             this.player2Box.Name = "player2Box";
@@ -92,6 +97,7 @@
             // startButton
             // 
             this.startButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.startButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.startButton.Location = new System.Drawing.Point(323, 290);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(68, 23);
@@ -103,6 +109,7 @@
             // player1Label
             // 
             this.player1Label.AutoSize = true;
+            this.player1Label.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.player1Label.Location = new System.Drawing.Point(339, 102);
             this.player1Label.Name = "player1Label";
             this.player1Label.Size = new System.Drawing.Size(48, 13);
@@ -112,6 +119,7 @@
             // player2Label
             // 
             this.player2Label.AutoSize = true;
+            this.player2Label.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.player2Label.Location = new System.Drawing.Point(339, 145);
             this.player2Label.Name = "player2Label";
             this.player2Label.Size = new System.Drawing.Size(48, 13);
@@ -121,7 +129,7 @@
             // messageLabel
             // 
             this.messageLabel.AutoSize = true;
-            this.messageLabel.BackColor = System.Drawing.Color.White;
+            this.messageLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.messageLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.messageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.messageLabel.ForeColor = System.Drawing.Color.DarkGreen;
@@ -141,15 +149,6 @@
             this.statusLabel.Size = new System.Drawing.Size(40, 13);
             this.statusLabel.TabIndex = 20;
             this.statusLabel.Text = "Status:";
-            // 
-            // ticPanel
-            // 
-            this.ticPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ticPanel.CurrentBoard = null;
-            this.ticPanel.Location = new System.Drawing.Point(12, 12);
-            this.ticPanel.Name = "ticPanel";
-            this.ticPanel.Size = new System.Drawing.Size(301, 301);
-            this.ticPanel.TabIndex = 2;
             // 
             // player2IconBox
             // 
@@ -179,9 +178,19 @@
             this.logoBox.Location = new System.Drawing.Point(323, 12);
             this.logoBox.Name = "logoBox";
             this.logoBox.Size = new System.Drawing.Size(150, 50);
+            this.logoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.logoBox.TabIndex = 1;
             this.logoBox.TabStop = false;
             this.logoBox.Click += new System.EventHandler(this.logoBox_Click);
+            // 
+            // ticPanel
+            // 
+            this.ticPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ticPanel.CurrentBoard = null;
+            this.ticPanel.Location = new System.Drawing.Point(12, 12);
+            this.ticPanel.Name = "ticPanel";
+            this.ticPanel.Size = new System.Drawing.Size(301, 301);
+            this.ticPanel.TabIndex = 2;
             // 
             // TicForm
             // 
