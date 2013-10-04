@@ -35,7 +35,7 @@ namespace TicTacToe
             player1Box.Items.Add("Michele AI");
             player2Box.Items.Add("Michele AI");
             tselleckAI = new TselleckAI("Tselleck AI", TicResources.Cross, ticGame);
-            computerPlayerDict["Tselleck AI"] = micheleAI;
+            computerPlayerDict["Tselleck AI"] = tselleckAI;
             player1Box.Items.Add("Tselleck AI");
             player2Box.Items.Add("Tselleck AI");
 

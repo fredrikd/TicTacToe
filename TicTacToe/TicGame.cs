@@ -57,11 +57,11 @@ namespace TicTacToe
             
 
             if (state == GameState.Player1)
-                if (board.AbleMove(move)) // true skall ersätta med Dennis metoden
+                if (board.AbleMove(move))   // Tillkallar metoden AbleMove som kollar ifall draget är gilltligt
                 {
-                    board.MakeMove(move);
+                    board.MakeMove(move);   // Tillkallar metoden MakeMove för att göra draget ifall det är gilltligt
                     ticPanel.Invalidate();
-                    if (board.BoardFull())
+                    if (board.BoardFull())  // Tillkallar metoden BoardFull för att se ifall spelbrädet är fullt
                     {
                         // kolla gameover metoden
                         return;
@@ -77,11 +77,11 @@ namespace TicTacToe
                     return;
                 }
             else if (state == GameState.Player2)
-                if (board.AbleMove(move)) // true skall ersätta med Dennis metoden
+                if (board.AbleMove(move))   // Tillkallar metoden AbleMove som kollar ifall draget är gilltligt
                 {
-                    board.MakeMove(move);
+                    board.MakeMove(move);   // Tillkallar metoden MakeMove för att göra draget ifall det är gilltligt
                     ticPanel.Invalidate();
-                    if (board.BoardFull())
+                    if (board.BoardFull())  // Tillkallar metoden BoardFull för att se ifall spelbrädet är fullt
                     {
                         // kolla gameover metoden
                         return;
