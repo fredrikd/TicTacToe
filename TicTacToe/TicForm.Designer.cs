@@ -58,6 +58,7 @@
             this.logoBox.Size = new System.Drawing.Size(150, 50);
             this.logoBox.TabIndex = 1;
             this.logoBox.TabStop = false;
+            this.logoBox.Click += new System.EventHandler(this.logoBox_Click);
             // 
             // copyrightLabel
             // 
@@ -88,12 +89,12 @@
             this.player2Box.TabIndex = 10;
             this.player2Box.Text = "Enter player or choose AI";
             // 
-            // stopButton
+            // abortButton
             // 
             this.abortButton.Enabled = false;
             this.abortButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.abortButton.Location = new System.Drawing.Point(405, 290);
-            this.abortButton.Name = "stopButton";
+            this.abortButton.Name = "abortButton";
             this.abortButton.Size = new System.Drawing.Size(68, 23);
             this.abortButton.TabIndex = 12;
             this.abortButton.Text = "Abort";
@@ -206,6 +207,7 @@
             this.MaximizeBox = false;
             this.Name = "TicForm";
             this.Text = "Tic Tac Toe .NET";
+            this.Load += new System.EventHandler(this.TicForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player1IconBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2IconBox)).EndInit();
