@@ -27,7 +27,8 @@ namespace TicTacToe
         // 
         public abstract void NotifyTurn();
 
-        // Anropas när spelet slutar.
+        // Anropas när spelet slutar, dvs. när det
+        // avbryts eller när någon vinner.
         public abstract void NotifyGameStops();
     }
 }

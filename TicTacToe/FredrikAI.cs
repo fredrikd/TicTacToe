@@ -16,6 +16,7 @@ namespace TicTacToe
 
         public override void NotifyGameStarts()
         {
+            Console.WriteLine("Fredrik AI noterar att spelet börjar.");
         }
 
         public override void NotifyTurn()
@@ -26,6 +27,7 @@ namespace TicTacToe
 
         public override void NotifyGameStops()
         {
+            Console.WriteLine("Fredrik AI noterar att spelet slutar.");
         }
     }
 }

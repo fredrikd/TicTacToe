@@ -70,7 +70,7 @@ namespace TicTacToe
         public void Start()
         {
             startButton.Enabled = false;
-            stopButton.Enabled = true;
+            abortButton.Enabled = true;
             player1Box.Enabled = false;
             player2Box.Enabled = false;
             Player player1 = WhoIsPlayer1();
@@ -83,10 +83,10 @@ namespace TicTacToe
         public void Stop()
         {
             startButton.Enabled = true;
-            stopButton.Enabled = false;
+            abortButton.Enabled = false;
             player1Box.Enabled = true;
             player2Box.Enabled = true;
-            ticGame.StopGame();
+            ticGame.AbortGame();
         }
 
         private void startButton_Click(object sender, EventArgs e)

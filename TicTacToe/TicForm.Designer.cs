@@ -34,7 +34,7 @@
             this.copyrightLabel = new System.Windows.Forms.Label();
             this.player1Box = new System.Windows.Forms.ComboBox();
             this.player2Box = new System.Windows.Forms.ComboBox();
-            this.stopButton = new System.Windows.Forms.Button();
+            this.abortButton = new System.Windows.Forms.Button();
             this.startButton = new System.Windows.Forms.Button();
             this.player1IconBox = new System.Windows.Forms.PictureBox();
             this.player1Label = new System.Windows.Forms.Label();
@@ -90,15 +90,15 @@
             // 
             // stopButton
             // 
-            this.stopButton.Enabled = false;
-            this.stopButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.stopButton.Location = new System.Drawing.Point(405, 290);
-            this.stopButton.Name = "stopButton";
-            this.stopButton.Size = new System.Drawing.Size(68, 23);
-            this.stopButton.TabIndex = 12;
-            this.stopButton.Text = "Stop";
-            this.stopButton.UseVisualStyleBackColor = true;
-            this.stopButton.Click += new System.EventHandler(this.stopButton_Click);
+            this.abortButton.Enabled = false;
+            this.abortButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.abortButton.Location = new System.Drawing.Point(405, 290);
+            this.abortButton.Name = "stopButton";
+            this.abortButton.Size = new System.Drawing.Size(68, 23);
+            this.abortButton.TabIndex = 12;
+            this.abortButton.Text = "Abort";
+            this.abortButton.UseVisualStyleBackColor = true;
+            this.abortButton.Click += new System.EventHandler(this.stopButton_Click);
             // 
             // startButton
             // 
@@ -195,7 +195,7 @@
             this.Controls.Add(this.player1IconBox);
             this.Controls.Add(this.player1Label);
             this.Controls.Add(this.startButton);
-            this.Controls.Add(this.stopButton);
+            this.Controls.Add(this.abortButton);
             this.Controls.Add(this.player2Box);
             this.Controls.Add(this.player1Box);
             this.Controls.Add(this.copyrightLabel);
@@ -222,7 +222,7 @@
         private System.Windows.Forms.Label copyrightLabel;
         private System.Windows.Forms.ComboBox player1Box;
         private System.Windows.Forms.ComboBox player2Box;
-        private System.Windows.Forms.Button stopButton;
+        private System.Windows.Forms.Button abortButton;
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.PictureBox player1IconBox;
         private System.Windows.Forms.Label player1Label;

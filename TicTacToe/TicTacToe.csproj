@@ -47,6 +47,7 @@
     <Compile Include="Board.cs" />
     <Compile Include="ComputerPlayer.cs" />
     <Compile Include="FredrikAI.cs" />
+    <Compile Include="FredrikGameTree.cs" />
     <Compile Include="HumanPlayer.cs" />
     <Compile Include="MicheleAI.cs" />
     <Compile Include="Move.cs" />

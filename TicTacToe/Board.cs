@@ -89,8 +89,7 @@ namespace TicTacToe
             // Kolla rader.
             for (int y = 0; y < sizeY; y++)
             {
-                first = pieces[0, y];
-                for (int x = 1; x < sizeX; x++)
+                if((first = pieces[0, y]) != null) for (int x = 1; x < sizeX; x++)
                 {
                     if (pieces[x, y] != first) break;
                     else if(x == sizeX - 1) // Sista i raden.
@@ -103,8 +102,7 @@ namespace TicTacToe
             // Kolla kolumner.
             for (int x = 0; x < sizeX; x++)
             {
-                first = pieces[x, 0];
-                for (int y = 1; y < sizeY; y++)
+                if ((first = pieces[x, 0]) != null) for (int y = 1; y < sizeY; y++)
                 {
                     if (pieces[x, y] != first) break;
                     else if(y == sizeY - 1) // Sista i kolumnen.
@@ -117,8 +115,7 @@ namespace TicTacToe
             // Om spelbrädet är kvadratiskt kollas även diagonalerna.
             if (sizeX == sizeY)
             {
-                first = pieces[0, 0];
-                for (int i = 1; i < sizeX; i++)
+                if((first = pieces[0, 0]) != null) for (int i = 1; i < sizeX; i++)
                 {
                     if(pieces[i, i] != first) break;
                     else if (i == sizeX - 1) // Sista i diagonalen.
@@ -127,8 +124,7 @@ namespace TicTacToe
                     }
                 }
 
-                first = pieces[sizeX - 1, 0];
-                for (int i = 1; i < sizeX; i++)
+                if((first = pieces[sizeX - 1, 0]) != null) for (int i = 1; i < sizeX; i++)
                 {
                     if (pieces[(sizeX - 1) - i, i] != first) break;
                     else if (i == sizeX - 1) // Sista i diagonalen.
