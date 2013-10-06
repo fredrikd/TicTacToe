@@ -39,13 +39,17 @@
             this.player2Label = new System.Windows.Forms.Label();
             this.messageLabel = new System.Windows.Forms.Label();
             this.statusLabel = new System.Windows.Forms.Label();
+            this.rovareBox1 = new System.Windows.Forms.PictureBox();
             this.player2IconBox = new System.Windows.Forms.PictureBox();
             this.player1IconBox = new System.Windows.Forms.PictureBox();
             this.logoBox = new System.Windows.Forms.PictureBox();
+            this.rovareBox2 = new System.Windows.Forms.PictureBox();
             this.ticPanel = new TicTacToe.TicPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.rovareBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2IconBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player1IconBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rovareBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // copyrightLabel
@@ -68,7 +72,7 @@
             this.player1Box.Name = "player1Box";
             this.player1Box.Size = new System.Drawing.Size(150, 21);
             this.player1Box.TabIndex = 8;
-            this.player1Box.Text = "Enter player or choose AI";
+            this.player1Box.MouseClick += new System.Windows.Forms.MouseEventHandler(this.player1Box_MouseClick);
             // 
             // player2Box
             // 
@@ -80,7 +84,7 @@
             this.player2Box.Name = "player2Box";
             this.player2Box.Size = new System.Drawing.Size(150, 21);
             this.player2Box.TabIndex = 10;
-            this.player2Box.Text = "Enter player or choose AI";
+            this.player2Box.MouseClick += new System.Windows.Forms.MouseEventHandler(this.player2Box_MouseClick);
             // 
             // abortButton
             // 
@@ -131,24 +135,38 @@
             this.messageLabel.AutoSize = true;
             this.messageLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.messageLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.messageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.messageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.messageLabel.ForeColor = System.Drawing.Color.DarkGreen;
-            this.messageLabel.Location = new System.Drawing.Point(324, 248);
+            this.messageLabel.Location = new System.Drawing.Point(324, 222);
             this.messageLabel.MaximumSize = new System.Drawing.Size(150, 50);
             this.messageLabel.MinimumSize = new System.Drawing.Size(150, 2);
             this.messageLabel.Name = "messageLabel";
-            this.messageLabel.Size = new System.Drawing.Size(150, 22);
+            this.messageLabel.Size = new System.Drawing.Size(150, 18);
             this.messageLabel.TabIndex = 19;
             this.messageLabel.Text = "Welcome!";
             // 
             // statusLabel
             // 
             this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(323, 232);
+            this.statusLabel.Location = new System.Drawing.Point(323, 206);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(40, 13);
             this.statusLabel.TabIndex = 20;
             this.statusLabel.Text = "Status:";
+            // 
+            // rovareBox1
+            // 
+            this.rovareBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rovareBox1.Image = global::TicTacToe.Properties.Resources.tic_rovare;
+            this.rovareBox1.Location = new System.Drawing.Point(460, 101);
+            this.rovareBox1.MaximumSize = new System.Drawing.Size(14, 14);
+            this.rovareBox1.MinimumSize = new System.Drawing.Size(14, 14);
+            this.rovareBox1.Name = "rovareBox1";
+            this.rovareBox1.Size = new System.Drawing.Size(14, 14);
+            this.rovareBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rovareBox1.TabIndex = 21;
+            this.rovareBox1.TabStop = false;
+            this.rovareBox1.Click += new System.EventHandler(this.rovareBox1_Click);
             // 
             // player2IconBox
             // 
@@ -181,7 +199,20 @@
             this.logoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.logoBox.TabIndex = 1;
             this.logoBox.TabStop = false;
-            this.logoBox.Click += new System.EventHandler(this.logoBox_Click);
+            // 
+            // rovareBox2
+            // 
+            this.rovareBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rovareBox2.Image = global::TicTacToe.Properties.Resources.tic_rovare;
+            this.rovareBox2.Location = new System.Drawing.Point(460, 145);
+            this.rovareBox2.MaximumSize = new System.Drawing.Size(14, 14);
+            this.rovareBox2.MinimumSize = new System.Drawing.Size(14, 14);
+            this.rovareBox2.Name = "rovareBox2";
+            this.rovareBox2.Size = new System.Drawing.Size(14, 14);
+            this.rovareBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rovareBox2.TabIndex = 22;
+            this.rovareBox2.TabStop = false;
+            this.rovareBox2.Click += new System.EventHandler(this.rovareBox2_Click);
             // 
             // ticPanel
             // 
@@ -198,6 +229,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(484, 326);
+            this.Controls.Add(this.rovareBox2);
+            this.Controls.Add(this.rovareBox1);
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.messageLabel);
             this.Controls.Add(this.player2IconBox);
@@ -216,10 +249,11 @@
             this.MaximizeBox = false;
             this.Name = "TicForm";
             this.Text = "Tic Tac Toe .NET";
-            this.Load += new System.EventHandler(this.TicForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.rovareBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2IconBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player1IconBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rovareBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,6 +275,8 @@
         private System.Windows.Forms.Label player2Label;
         private System.Windows.Forms.Label messageLabel;
         private System.Windows.Forms.Label statusLabel;
+        private System.Windows.Forms.PictureBox rovareBox1;
+        private System.Windows.Forms.PictureBox rovareBox2;
     }
 }
 

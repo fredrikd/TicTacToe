@@ -138,6 +138,11 @@ namespace TicTacToe
             return new WinStruct(null, null, null, null);
         }
 
+        public bool BoardFinished()
+        {
+            return BoardFull() || FindWinner().Winner != null;
+        }
+
         //Kollar ifall Move, "m" innehåller ett värde eller ej.
         //Method som returnerar en bool
         public bool AbleMove(Move m)

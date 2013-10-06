@@ -15,21 +15,26 @@ namespace TicTacToe
     {
         private TicGame ticGame;
         private Dictionary<string, Player> computerPlayerDict;
-        private FredrikAI fredrikAI;
+        private FredrikAI fredrikAI1, fredrikAI2; // Två instanser pga. att samma AI ska kunna spela mot sig själv.
         private MicheleAI micheleAI;
         private TselleckAI tselleckAI;
+        private const string InitialBoxText = "Enter player or choose AI";
+
         public TicForm()
         {
             InitializeComponent();
-            ticGame = new TicGame(ticPanel, messageLabel);
+            ticGame = new TicGame(this, ticPanel, messageLabel);
             computerPlayerDict = new Dictionary<string, Player>();
+            player1Box.Text = player2Box.Text = InitialBoxText;
 
             // Initialt anges att datorspelarna ska spela med kryss,
             // men det justeras när spelet startas.
-            fredrikAI = new FredrikAI("Fredrik AI", TicResources.Cross, ticGame);
-            computerPlayerDict["Fredrik AI"] = fredrikAI;
-            player1Box.Items.Add("Fredrik AI");
-            player2Box.Items.Add("Fredrik AI");
+            fredrikAI1 = new FredrikAI("Fredrik AI (1)", TicResources.Cross, ticGame);
+            computerPlayerDict["Fredrik AI (1)"] = fredrikAI1;
+            player1Box.Items.Add("Fredrik AI (1)");
+            fredrikAI2 = new FredrikAI("Fredrik AI (2)", TicResources.Cross, ticGame);
+            computerPlayerDict["Fredrik AI (2)"] = fredrikAI2;
+            player2Box.Items.Add("Fredrik AI (2)");
             micheleAI = new MicheleAI("Michele AI", TicResources.Cross, ticGame);
             computerPlayerDict["Michele AI"] = micheleAI;
             player1Box.Items.Add("Michele AI");
@@ -38,7 +43,6 @@ namespace TicTacToe
             computerPlayerDict["Tselleck AI"] = tselleckAI;
             player1Box.Items.Add("Tselleck AI");
             player2Box.Items.Add("Tselleck AI");
-
         }
 
         public Player WhoIsPlayer1()
@@ -67,12 +71,21 @@ namespace TicTacToe
             return player;
         }
 
+        public void ChangeComponentsToStartedMode(bool started)
+        {
+            startButton.Enabled = !started;
+            abortButton.Enabled = started;
+            player1Box.Enabled = !started;
+            player2Box.Enabled = !started;
+            rovareBox1.Enabled = !started;
+            rovareBox2.Enabled = !started;
+        }
+
         public void Start()
         {
-            startButton.Enabled = false;
-            abortButton.Enabled = true;
-            player1Box.Enabled = false;
-            player2Box.Enabled = false;
+            if (player1Box.Text == InitialBoxText || player1Box.Text == "") player1Box.Text = "Player 1";
+            if (player2Box.Text == InitialBoxText || player2Box.Text == "") player2Box.Text = "Player 2";
+            ChangeComponentsToStartedMode(true);
             Player player1 = WhoIsPlayer1();
             Player player2 = WhoIsPlayer2();
             Board board = new Board();
@@ -82,10 +95,7 @@ namespace TicTacToe
 
         public void Stop()
         {
-            startButton.Enabled = true;
-            abortButton.Enabled = false;
-            player1Box.Enabled = true;
-            player2Box.Enabled = true;
+            ChangeComponentsToStartedMode(false);
             ticGame.AbortGame();
         }
 
@@ -99,14 +109,24 @@ namespace TicTacToe
             Stop();
         }
 
-        private void logoBox_Click(object sender, EventArgs e)
+        private void player1Box_MouseClick(object sender, MouseEventArgs e)
         {
-
+            if (player1Box.Text == InitialBoxText) player1Box.Text = "";
         }
 
-        private void TicForm_Load(object sender, EventArgs e)
+        private void player2Box_MouseClick(object sender, MouseEventArgs e)
         {
+            if (player2Box.Text == InitialBoxText) player2Box.Text = "";
+        }
 
+        private void rovareBox1_Click(object sender, EventArgs e)
+        {
+            player1Box.Text = player1Box.Text.rova();
+        }
+
+        private void rovareBox2_Click(object sender, EventArgs e)
+        {
+            player2Box.Text = player2Box.Text.rova();
         }
     }
 }

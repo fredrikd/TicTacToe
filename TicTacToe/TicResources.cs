@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 
 namespace TicTacToe
 {
@@ -10,6 +11,8 @@ namespace TicTacToe
         public static Piece Cross;
         public static Piece Knot;
 
+        public static Random Rand;
+
         static TicResources()
         {
             CrossBitmap = new Bitmap(@"..\..\tic_cross.png");
@@ -19,6 +22,8 @@ namespace TicTacToe
 
             Cross = new Piece(CrossBitmap);
             Knot = new Piece(KnotBitmap);
+
+            Rand = new Random();
         }
     }
 }
