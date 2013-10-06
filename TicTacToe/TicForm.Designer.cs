@@ -187,6 +187,7 @@
             // 
             this.ticPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ticPanel.CurrentBoard = null;
+            this.ticPanel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ticPanel.Location = new System.Drawing.Point(12, 12);
             this.ticPanel.Name = "ticPanel";
             this.ticPanel.Size = new System.Drawing.Size(301, 301);
