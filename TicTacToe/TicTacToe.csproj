@@ -53,6 +53,7 @@
     <Compile Include="Move.cs" />
     <Compile Include="Piece.cs" />
     <Compile Include="Player.cs" />
+    <Compile Include="Rovarsprak.cs" />
     <Compile Include="TicResources.cs" />
     <Compile Include="TicForm.cs">
       <SubType>Form</SubType>
@@ -95,6 +96,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="tic_rovare.png" />
     <None Include="Resources\tic_logo1.jpg" />
     <None Include="Resources\tic_logo_png.png" />
     <Content Include="tic_cross.png" />

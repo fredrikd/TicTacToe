@@ -21,7 +21,6 @@ namespace TicTacToe
 
         public override void NotifyTurn()
         {
-            Console.WriteLine(Name + " notified.");
             SubscribeToPanelClicks(true);
         }
 
@@ -40,7 +39,6 @@ namespace TicTacToe
         {
             Point clickPoint = new Point(e.X, e.Y);
             Point clickCell = MyGame.ticPanel.WhichCell(clickPoint);
-            Console.WriteLine(Name + " utför draget " + clickCell);
             SubscribeToPanelClicks(false);
             MyGame.MakeMove(new Move(clickCell, PlayerPiece));
         }
