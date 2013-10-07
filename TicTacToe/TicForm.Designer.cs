@@ -66,7 +66,7 @@
             // 
             this.player1Box.AccessibleDescription = "dfgertert";
             this.player1Box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.player1Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.player1Box.ForeColor = System.Drawing.Color.MidnightBlue;
             this.player1Box.FormattingEnabled = true;
             this.player1Box.Location = new System.Drawing.Point(323, 117);
             this.player1Box.Name = "player1Box";
@@ -78,7 +78,7 @@
             // 
             this.player2Box.AccessibleDescription = "dfgertert";
             this.player2Box.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.player2Box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.player2Box.ForeColor = System.Drawing.Color.MidnightBlue;
             this.player2Box.FormattingEnabled = true;
             this.player2Box.Location = new System.Drawing.Point(323, 160);
             this.player2Box.Name = "player2Box";

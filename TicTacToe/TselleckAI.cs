@@ -8,7 +8,6 @@ namespace TicTacToe
 {
     public class TselleckAI: ComputerPlayer
     {
-        private TicGame ticGame;
         public TselleckAI(string name, Piece piece, TicGame ticGame)
             : base(name, piece, ticGame)
         {
@@ -20,8 +19,8 @@ namespace TicTacToe
 
         public override void NotifyTurn()
         {
-            MyGame.MakeMove(new Move(1, 1, PlayerPiece));
-            //board.pieces[0, 0] = PlayerPiece;
+            //MyGame.MakeMove(new Move(1, 1, PlayerPiece));
+            MyGame.MakeMove(new Move(TicResources.Rand.Next(0,9),TicResources.Rand.Next(0,9), PlayerPiece));
         }
 
         public override void NotifyGameStops()

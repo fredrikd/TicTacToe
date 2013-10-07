@@ -17,7 +17,7 @@ namespace TicTacToe
         private Dictionary<string, Player> computerPlayerDict;
         private FredrikAI fredrikAI1, fredrikAI2; // Två instanser pga. att samma AI ska kunna spela mot sig själv.
         private MicheleAI micheleAI;
-        private TselleckAI tselleckAI;
+        private TselleckAI tselleckAI1, tselleckAI2;
         private const string InitialBoxText = "Enter player or choose AI";
 
         public TicForm()
@@ -39,10 +39,12 @@ namespace TicTacToe
             computerPlayerDict["Michele AI"] = micheleAI;
             player1Box.Items.Add("Michele AI");
             player2Box.Items.Add("Michele AI");
-            tselleckAI = new TselleckAI("Tselleck AI", TicResources.Cross, ticGame);
-            computerPlayerDict["Tselleck AI"] = tselleckAI;
-            player1Box.Items.Add("Tselleck AI");
-            player2Box.Items.Add("Tselleck AI");
+            tselleckAI1 = new TselleckAI("Tselleck AI (1)", TicResources.Cross, ticGame);
+            computerPlayerDict["Tselleck AI (1)"] = tselleckAI1;
+            player1Box.Items.Add("Tselleck AI (1)");
+            tselleckAI2 = new TselleckAI("Tselleck AI (2)", TicResources.Cross, ticGame);
+            computerPlayerDict["Tselleck AI (2)"] = tselleckAI2;
+            player2Box.Items.Add("Tselleck AI (2)");
         }
 
         public Player WhoIsPlayer1()

@@ -8,7 +8,7 @@ namespace TicTacToe
 {
     class MicheleAI : ComputerPlayer
     {
-            private TicGame ticGame;
+            private TicGame oh;
         public MicheleAI(string name, Piece piece, TicGame ticGame)
             : base(name, piece, ticGame)
         {
